@@ -20,9 +20,15 @@ public class USERScannerTestController {
     public List<USERScannerTestModel> hello(){
         return userScannerTestService.getItems();
     }
-
+/*
     @GetMapping (path = "{var}")
     public void post(@PathVariable("var") String f1){
         userScannerTestService.modifyUSERScannerTest(f1, 1);
+    }
+
+ */
+    @GetMapping(path ="{var}")
+    public void insert(@PathVariable("var") String f1){
+        userScannerTestService.insertUSERScannerTest(f1);
     }
 }

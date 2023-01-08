@@ -19,7 +19,16 @@ public class USERScannerTestService {
     public List<USERScannerTestModel> getItems(){
         return userScannerTestRepository.findAll();
     }
-    public void modifyUSERScannerTest(String f1, Integer integer){
+    /*public void modifyUSERScannerTest(String f1, Integer integer){
         userScannerTestRepository.update(f1, integer);
+    }
+
+     */
+    public void insertUSERScannerTest(String f1){
+        System.out.println(f1);
+        USERScannerTestModel userScannerTestModel = new USERScannerTestModel();
+        userScannerTestModel.setExemplarNr(f1);
+        System.out.println(userScannerTestModel.getExemplarNr());
+        userScannerTestRepository.save(userScannerTestModel);
     }
 }
