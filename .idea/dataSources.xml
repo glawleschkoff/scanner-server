@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
+    <data-source source="LOCAL" name="JDBC Data Source" uuid="76fdd90e-966f-45e3-ac5a-1de7dccde23c">
+      <driver-ref>19965c36-d5aa-411b-a38a-01c4e2a77315</driver-ref>
+      <synchronize>true</synchronize>
+      <configured-by-url>true</configured-by-url>
+      <jdbc-driver>com.pervasive.jdbc.v2.Driver</jdbc-driver>
+      <jdbc-url>jdbc:pervasive://KuhnleServer:1583/HKUHNLE</jdbc-url>
+      <working-dir>$ProjectFileDir$</working-dir>
+    </data-source>
+  </component>
+</project>

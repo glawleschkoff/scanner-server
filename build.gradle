@@ -19,6 +19,9 @@ dependencies {
     implementation 'com.pervasive.jdbc:jpscs:2.5'
     implementation 'com.pervasive.jdbc:pvjdbc2:2.5'
     implementation 'com.pervasive.jdbc:pvjdbc2x:2.5'
+
+    implementation 'org.json:json:20090211'
+
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
 }
 

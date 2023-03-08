@@ -16,7 +16,7 @@ public class USERScannerTestController {
         this.userScannerTestService = userScannerTestService;
     }
 
-    @GetMapping
+    //@GetMapping
     public List<USERScannerTestModel> hello(){
         return userScannerTestService.getItems();
     }
@@ -27,7 +27,7 @@ public class USERScannerTestController {
     }
 
  */
-    @GetMapping(path ="{var}")
+    //@GetMapping(path ="{var}")
     public void insert(@PathVariable("var") String f1){
         userScannerTestService.insertUSERScannerTest(f1);
     }
