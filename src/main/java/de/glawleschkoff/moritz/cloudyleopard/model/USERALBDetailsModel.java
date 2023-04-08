@@ -10,14 +10,12 @@ import java.util.UUID;
 public class USERALBDetailsModel {
 
     @Id
-    @Column(columnDefinition = "IDENTITY(10) default '0'")
+    @Column(columnDefinition = "IDENTITY(10) default '0'", name = "RowID")
     private Integer rowID;
     @Column(columnDefinition = "TIMESTAMP(23) default NULL")
     private Timestamp RowTimestamp;
     @Column(columnDefinition = "INTEGER default NULL")
     private Integer RowUserID;
-    @Column(columnDefinition = "LONGVARCHAR(65500) default NULL")
-    private String RowDDMFields;
     @Column(columnDefinition = "UNIQUEIDENTIFIER(36) default NULL")
     private UUID RowGUID;
     @Column(columnDefinition = "TIMESTAMP(23) default NULL")
@@ -27,7 +25,7 @@ public class USERALBDetailsModel {
     @Column(columnDefinition = "DATE(10) default NULL")
     private Date RowLatestDelDate;
     @Column(columnDefinition = "VARCHAR(40) default 'NULL'")
-    private String ExemplarNr;
+    private String exemplarNr;
     @Column(columnDefinition = "VARCHAR(250) default 'NULL'")
     private String ALBAuftrag;
     @Column(columnDefinition = "VARCHAR(250) default 'NULL'")
@@ -68,6 +66,326 @@ public class USERALBDetailsModel {
     private String ProdFreigabe;
     @Column(columnDefinition = "VARCHAR(250) default 'NULL'")
     private String F20;
+    private String ProdDatum;
+    private String FertigDatum;
+    private String LetztesReset;
+    private String BeginnPlatte;
+    private String BeginnKante;
+    private String BeginnBankQM;
+    private String BeginnVerpk;
+    private String SollZtPlatte;
+    private String SollZtKante;
+    private String SollZtBankQM;
+    private String BauteilAnzGes;
+    private String ProdStopp;
+    private String PL_FLng;
+    private String PL_FBrt;
+    private String ZLng;
+    private String ZBrt;
+    private String Prio1Datum;
+    private String Prio2Datum;
+    private String Prio;
+    private String ArdisJob;
+    private String ArdisSPln;
+    private String PlattenID;
+    private String Maschine;
+    private String Säge;
+    private String OptiQuote;
+    private String OptiQtEff;
+    private String StripNo;
+    private String PlatteKlein;
+    private String Ausw;
+    private String AuslagerID;
+    private String ausgelagert;
+    private String SPlan_gedruckt;
+    private String BTEti_gedruckt;
+    private String STEti_gedruckt;
+    private String BAZ_Vorgabe;
+    private String BAZ_Fortschritt;
+    private String FertigZuschnitt;
+    private String ZuschnittDatum;
+    private String KA_Ist_L;
+    private String KB_Ist_L;
+    private String KC_Ist_L;
+    private String KD_Ist_L;
+    private String KE_Ist_L;
+    private String KF_Ist_L;
+    private String KG_Ist_L;
+    private String KH_Ist_L;
+    private String KA_Läufe;
+    private String KB_Läufe;
+    private String KC_Läufe;
+    private String KD_Läufe;
+    private String KE_Läufe;
+    private String KF_Läufe;
+    private String KG_Läufe;
+    private String KH_Läufe;
+    private String KA_Verbrauch;
+    private String KB_Verbrauch;
+    private String KC_Verbrauch;
+    private String KD_Verbrauch;
+    private String KE_Verbrauch;
+    private String KF_Verbrauch;
+    private String KG_Verbrauch;
+    private String KH_Verbrauch;
+    private String FertigKante;
+    private String CP_ausblenden;
+
+    public String getFertigDatum() {
+        return FertigDatum;
+    }
+
+    public String getLetztesReset() {
+        return LetztesReset;
+    }
+
+    public String getBeginnPlatte() {
+        return BeginnPlatte;
+    }
+
+    public String getBeginnKante() {
+        return BeginnKante;
+    }
+
+    public String getBeginnBankQM() {
+        return BeginnBankQM;
+    }
+
+    public String getBeginnVerpk() {
+        return BeginnVerpk;
+    }
+
+    public String getSollZtPlatte() {
+        return SollZtPlatte;
+    }
+
+    public String getSollZtKante() {
+        return SollZtKante;
+    }
+
+    public String getSollZtBankQM() {
+        return SollZtBankQM;
+    }
+
+    public String getBauteilAnzGes() {
+        return BauteilAnzGes;
+    }
+
+    public String getProdStopp() {
+        return ProdStopp;
+    }
+
+    public String getPL_FLng() {
+        return PL_FLng;
+    }
+
+    public String getPL_FBrt() {
+        return PL_FBrt;
+    }
+
+    public String getZLng() {
+        return ZLng;
+    }
+
+    public String getZBrt() {
+        return ZBrt;
+    }
+
+    public String getPrio1Datum() {
+        return Prio1Datum;
+    }
+
+    public String getPrio2Datum() {
+        return Prio2Datum;
+    }
+
+    public String getPrio() {
+        return Prio;
+    }
+
+    public String getArdisJob() {
+        return ArdisJob;
+    }
+
+    public String getArdisSPln() {
+        return ArdisSPln;
+    }
+
+    public String getPlattenID() {
+        return PlattenID;
+    }
+
+    public String getMaschine() {
+        return Maschine;
+    }
+
+    public String getSäge() {
+        return Säge;
+    }
+
+    public String getOptiQuote() {
+        return OptiQuote;
+    }
+
+    public String getOptiQtEff() {
+        return OptiQtEff;
+    }
+
+    public String getStripNo() {
+        return StripNo;
+    }
+
+    public String getPlatteKlein() {
+        return PlatteKlein;
+    }
+
+    public String getAusw() {
+        return Ausw;
+    }
+
+    public String getAuslagerID() {
+        return AuslagerID;
+    }
+
+    public String getAusgelagert() {
+        return ausgelagert;
+    }
+
+    public String getSPlan_gedruckt() {
+        return SPlan_gedruckt;
+    }
+
+    public String getBTEti_gedruckt() {
+        return BTEti_gedruckt;
+    }
+
+    public String getSTEti_gedruckt() {
+        return STEti_gedruckt;
+    }
+
+    public String getBAZ_Vorgabe() {
+        return BAZ_Vorgabe;
+    }
+
+    public String getBAZ_Fortschritt() {
+        return BAZ_Fortschritt;
+    }
+
+    public String getFertigZuschnitt() {
+        return FertigZuschnitt;
+    }
+
+    public String getZuschnittDatum() {
+        return ZuschnittDatum;
+    }
+
+    public String getKA_Ist_L() {
+        return KA_Ist_L;
+    }
+
+    public String getKB_Ist_L() {
+        return KB_Ist_L;
+    }
+
+    public String getKC_Ist_L() {
+        return KC_Ist_L;
+    }
+
+    public String getKD_Ist_L() {
+        return KD_Ist_L;
+    }
+
+    public String getKE_Ist_L() {
+        return KE_Ist_L;
+    }
+
+    public String getKF_Ist_L() {
+        return KF_Ist_L;
+    }
+
+    public String getKG_Ist_L() {
+        return KG_Ist_L;
+    }
+
+    public String getKH_Ist_L() {
+        return KH_Ist_L;
+    }
+
+    public String getKA_Läufe() {
+        return KA_Läufe;
+    }
+
+    public String getKB_Läufe() {
+        return KB_Läufe;
+    }
+
+    public String getKC_Läufe() {
+        return KC_Läufe;
+    }
+
+    public String getKD_Läufe() {
+        return KD_Läufe;
+    }
+
+    public String getKE_Läufe() {
+        return KE_Läufe;
+    }
+
+    public String getKF_Läufe() {
+        return KF_Läufe;
+    }
+
+    public String getKG_Läufe() {
+        return KG_Läufe;
+    }
+
+    public String getKH_Läufe() {
+        return KH_Läufe;
+    }
+
+    public String getKA_Verbrauch() {
+        return KA_Verbrauch;
+    }
+
+    public String getKB_Verbrauch() {
+        return KB_Verbrauch;
+    }
+
+    public String getKC_Verbrauch() {
+        return KC_Verbrauch;
+    }
+
+    public String getKD_Verbrauch() {
+        return KD_Verbrauch;
+    }
+
+    public String getKE_Verbrauch() {
+        return KE_Verbrauch;
+    }
+
+    public String getKF_Verbrauch() {
+        return KF_Verbrauch;
+    }
+
+    public String getKG_Verbrauch() {
+        return KG_Verbrauch;
+    }
+
+    public String getKH_Verbrauch() {
+        return KH_Verbrauch;
+    }
+
+    public String getFertigKante() {
+        return FertigKante;
+    }
+
+    public String getCP_ausblenden() {
+        return CP_ausblenden;
+    }
+
+    public String getProdDatum(){
+        return ProdDatum;
+    }
 
     public Integer getRowID() {
         return rowID;
@@ -79,10 +397,6 @@ public class USERALBDetailsModel {
 
     public Integer getRowUserID() {
         return RowUserID;
-    }
-
-    public String getRowDDMFields() {
-        return RowDDMFields;
     }
 
     public UUID getRowGUID() {
@@ -102,7 +416,7 @@ public class USERALBDetailsModel {
     }
 
     public String getExemplarNr() {
-        return ExemplarNr;
+        return exemplarNr;
     }
 
     public String getALBAuftrag() {

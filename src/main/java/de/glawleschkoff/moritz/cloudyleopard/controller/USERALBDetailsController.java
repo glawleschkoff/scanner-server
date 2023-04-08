@@ -6,6 +6,7 @@ import de.glawleschkoff.moritz.cloudyleopard.model.USERALBDetailsModel;
 import de.glawleschkoff.moritz.cloudyleopard.service.USERALBDetailsService;
 import org.json.JSONObject;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -20,15 +21,7 @@ public class USERALBDetailsController {
 
     @GetMapping("/api/v1/bauteil")
     public USERALBDetailsModel getUSERALBDetails(@RequestParam String id) throws JsonProcessingException {
-        return useralbDetailsService.getUSERALBDetailsById(Integer.valueOf(id));
+        return useralbDetailsService.getUSERALBDetailsById(id);
     }
 
-
-
-    /*@GetMapping("/api/v1/bauteil")
-    public USERALBDetailsModel getUSERALBDetails(){
-        return useralbDetailsService.getFirstUSERALBDetails();
-    }
-
-     */
 }

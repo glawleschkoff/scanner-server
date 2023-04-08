@@ -15,8 +15,8 @@ public class USERALBDetailsService {
         this.useralbDetailsRepository = useralbDetailsRepository;
     }
 
-    public USERALBDetailsModel getUSERALBDetailsById(Integer id){
-        return useralbDetailsRepository.findByRowID(id);
+    public USERALBDetailsModel getUSERALBDetailsById(String id){
+        return useralbDetailsRepository.findByExemplarNr(id);
     }
 
 }
