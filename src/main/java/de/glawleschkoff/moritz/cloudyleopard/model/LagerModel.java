@@ -9,8 +9,8 @@ import java.sql.Timestamp;
 import java.util.UUID;
 
 @Entity
-@Table(name = "USERBauteilLog")
-public class USERBauteilLogModel {
+@Table(name = "Lager")
+public class LagerModel {
 
     @Id
     @Column(columnDefinition = "IDENTITY(10) default '0'", name = "RowID")
@@ -27,21 +27,10 @@ public class USERBauteilLogModel {
     private Date RowEarliestDelDate;
     @Column(columnDefinition = "DATE(10) default NULL")
     private Date RowLatestDelDate;
-    @Column(columnDefinition = "DATE(10) default NULL")
-    private Date Datum;
-    @Column(columnDefinition = "DOUBLE(15) default NULL")
-    private Double Uhrzeit;
-    @Column(columnDefinition = "VARCHAR(30) default NULL")
-    private String exemplarNr;
-    @Column(columnDefinition = "VARCHAR(30) default NULL")
-    private String Job;
-    @Column(columnDefinition = "VARCHAR(30) default NULL")
-    private String Vorgang;
-    @Column(columnDefinition = "LONGVARCHAR(65500) default NULL")
-    private String Protokoll;
-    private String Mitarbeiter;
-    private String Ergebnis;
+    @Column(columnDefinition = "VARCHAR(40) default NULL")
+    private String kurzzeichen;
 
+    private String MPTextur;
 
     public Integer getRowID() {
         return rowID;
@@ -71,33 +60,11 @@ public class USERBauteilLogModel {
         return RowLatestDelDate;
     }
 
-    public Date getDatum() {
-        return Datum;
+    public String getKurzzeichen() {
+        return kurzzeichen;
     }
 
-    public Double getUhrzeit() {
-        return Uhrzeit;
-    }
-
-    public String getExemplarNr() {
-        return exemplarNr;
-    }
-
-    public String getJob() {
-        return Job;
-    }
-
-    public String getVorgang() {
-        return Vorgang;
-    }
-
-    public String getProtokoll() {
-        return Protokoll;
-    }
-    public String getMitarbeiter() {
-        return Mitarbeiter;
-    }
-    public String getErgebnis() {
-        return Ergebnis;
+    public String getMPTextur() {
+        return MPTextur;
     }
 }

@@ -75,13 +75,40 @@ public class FileController {
                 .body(resource);
     }
 
-    @GetMapping("/api/v1/image")
+    @GetMapping("/api/v1/image/bauteil")
     //public ResponseEntity<Resource> downloadFile(@PathVariable String fileName, HttpServletRequest request) {
-    public ResponseEntity<Resource> downloadImage(@RequestParam String id, @RequestParam String name, HttpServletRequest request) {
+    public ResponseEntity<Resource> downloadImageBauteil(@RequestParam String id, @RequestParam String name, HttpServletRequest request) {
         // Load file as Resource
         //Resource resource = fileStorageService.loadFileAsResource(fileName);
         Resource resource = fileStorageService.loadFileAsResource(new String[]{"Kuhnle","A",id,"GRAFIK",name});
         System.out.println("blub");
+
+        // Try to determine file's content type
+        String contentType = null;
+        try {
+            contentType = request.getServletContext().getMimeType(resource.getFile().getAbsolutePath());
+        } catch (IOException ex) {
+            logger.info("Could not determine file type.");
+        }
+
+        // Fallback to the default content type if type could not be determined
+        if(contentType == null) {
+            contentType = "application/octet-stream";
+        }
+
+        return ResponseEntity.ok()
+                .contentType(MediaType.parseMediaType(contentType))
+                .header(HttpHeaders.CONTENT_DISPOSITION, "attachment; filename=\"" + resource.getFilename() + "\"")
+                .body(resource);
+    }
+
+    @GetMapping("/api/v1/image/material")
+    //public ResponseEntity<Resource> downloadFile(@PathVariable String fileName, HttpServletRequest request) {
+    public ResponseEntity<Resource> downloadImageMaterial(@RequestParam String name, HttpServletRequest request) {
+        // Load file as Resource
+        //Resource resource = fileStorageService.loadFileAsResource(fileName);
+        Resource resource = fileStorageService.loadFileAsResource(new String[]{"Kuhnle","Textur",name});
+        System.out.println("blub22");
 
         // Try to determine file's content type
         String contentType = null;

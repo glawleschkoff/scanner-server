@@ -2,8 +2,11 @@ package de.glawleschkoff.moritz.cloudyleopard.repository;
 
 import de.glawleschkoff.moritz.cloudyleopard.model.USERALBDetailsModel;
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
+
+import javax.transaction.Transactional;
 
 @Repository
 public interface USERALBDetailsRepository extends JpaRepository<USERALBDetailsModel, Integer> {
@@ -48,6 +51,7 @@ public interface USERALBDetailsRepository extends JpaRepository<USERALBDetailsMo
             ", GetDDMB('STEti gedruckt',RowDDMFields) as STEti_gedruckt" +
             ", GetDDMStr('BAZ Vorgabe',RowDDMFields) as BAZ_Vorgabe" +
             ", GetDDMStr('BAZ Fortschritt',RowDDMFields) as BAZ_Fortschritt" +
+            ", GetDDMStr('Kante Fortschritt',RowDDMFields) as Kante_Fortschritt" +
             ", GetDDMB('FertigZuschnitt',RowDDMFields) as FertigZuschnitt" +
             ", GetDDMDate('ZuschnittDatum',RowDDMFields) as ZuschnittDatum" +
             ", GetDDMVal('KA Ist L',RowDDMFields) as KA_Ist_L" +
@@ -78,6 +82,11 @@ public interface USERALBDetailsRepository extends JpaRepository<USERALBDetailsMo
             ", GetDDMB('CP ausblenden',RowDDMFields) as CP_ausblenden" +
             " from USERALBDetails a where a.ExemplarNr= :id ", nativeQuery = true)
     USERALBDetailsModel findByExemplarNr(String id);
+
+    @Transactional
+    @Modifying
+    @Query(value = "update USERALBDetails u set u.ScannerAntwort = :scannerAnweisung where u.ExemplarNr = :exemplarNr", nativeQuery = true)
+    void updateUSERALBDetails(String exemplarNr, String scannerAnweisung);
 
 }
 

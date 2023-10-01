@@ -19,4 +19,8 @@ public class USERALBDetailsService {
         return useralbDetailsRepository.findByExemplarNr(id);
     }
 
+    public void updateUSERALBDetails(String exemplarNr, String scannerAnweisung){
+        useralbDetailsRepository.updateUSERALBDetails(exemplarNr, scannerAnweisung);
+    }
+
 }

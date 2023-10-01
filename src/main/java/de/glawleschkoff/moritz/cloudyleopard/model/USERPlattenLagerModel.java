@@ -9,8 +9,8 @@ import java.sql.Timestamp;
 import java.util.UUID;
 
 @Entity
-@Table(name = "USERBauteilLog")
-public class USERBauteilLogModel {
+@Table(name = "USERPlattenLager")
+public class USERPlattenLagerModel {
 
     @Id
     @Column(columnDefinition = "IDENTITY(10) default '0'", name = "RowID")
@@ -27,21 +27,28 @@ public class USERBauteilLogModel {
     private Date RowEarliestDelDate;
     @Column(columnDefinition = "DATE(10) default NULL")
     private Date RowLatestDelDate;
-    @Column(columnDefinition = "DATE(10) default NULL")
-    private Date Datum;
     @Column(columnDefinition = "DOUBLE(15) default NULL")
-    private Double Uhrzeit;
+    private Double plattenID;
+    @Column(columnDefinition = "VARCHAR(10) default NULL")
+    private String LagerPlatz;
+    @Column(columnDefinition = "DOUBLE(15) default NULL")
+    private Double Lng;
+    @Column(columnDefinition = "DOUBLE(15) default NULL")
+    private Double Brt;
     @Column(columnDefinition = "VARCHAR(30) default NULL")
-    private String exemplarNr;
-    @Column(columnDefinition = "VARCHAR(30) default NULL")
-    private String Job;
-    @Column(columnDefinition = "VARCHAR(30) default NULL")
-    private String Vorgang;
-    @Column(columnDefinition = "LONGVARCHAR(65500) default NULL")
-    private String Protokoll;
-    private String Mitarbeiter;
-    private String Ergebnis;
-
+    private String MatKurzzeichen;
+    @Column(columnDefinition = "VARCHAR(60) default NULL")
+    private String MZ3;
+    @Column(columnDefinition = "DOUBLE(15) default NULL")
+    private Double optimiert;
+    @Column(columnDefinition = "DOUBLE(15) default NULL")
+    private Double Produktion;
+    @Column(columnDefinition = "VARCHAR(15) default NULL")
+    private String MZ6;
+    @Column(columnDefinition = "VARCHAR(60) default NULL")
+    private String MZ1;
+    @Column(columnDefinition = "DOUBLE(15) default NULL")
+    private Double Menge;
 
     public Integer getRowID() {
         return rowID;
@@ -71,33 +78,48 @@ public class USERBauteilLogModel {
         return RowLatestDelDate;
     }
 
-    public Date getDatum() {
-        return Datum;
+    public Double getPlattenID() {
+        return plattenID;
     }
 
-    public Double getUhrzeit() {
-        return Uhrzeit;
+    public String getLagerPlatz() {
+        return LagerPlatz;
     }
 
-    public String getExemplarNr() {
-        return exemplarNr;
+    public Double getLng() {
+        return Lng;
     }
 
-    public String getJob() {
-        return Job;
+    public Double getBrt() {
+        return Brt;
     }
 
-    public String getVorgang() {
-        return Vorgang;
+    public String getMatKurzzeichen() {
+        return MatKurzzeichen;
     }
 
-    public String getProtokoll() {
-        return Protokoll;
+    public String getMZ3() {
+        return MZ3;
     }
-    public String getMitarbeiter() {
-        return Mitarbeiter;
+
+    public Double getOptimiert() {
+        return optimiert;
     }
-    public String getErgebnis() {
-        return Ergebnis;
+
+    public Double getProduktion() {
+        return Produktion;
+    }
+
+    public String getMZ6() {
+        return MZ6;
+    }
+
+    public String getMZ1() {
+        return MZ1;
+    }
+
+
+    public Double getMenge() {
+        return Menge;
     }
 }

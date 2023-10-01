@@ -24,4 +24,9 @@ public class USERALBDetailsController {
         return useralbDetailsService.getUSERALBDetailsById(id);
     }
 
+    @GetMapping("/api/v1/bauteilupdate")
+    public void updateUSERALBDetails(@RequestParam String exemplarNr, String scannerAnweisung) throws JsonProcessingException {
+        useralbDetailsService.updateUSERALBDetails(exemplarNr, scannerAnweisung);
+    }
+
 }

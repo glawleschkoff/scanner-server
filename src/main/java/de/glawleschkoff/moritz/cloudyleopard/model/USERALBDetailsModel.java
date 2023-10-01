@@ -102,6 +102,7 @@ public class USERALBDetailsModel {
     private String STEti_gedruckt;
     private String BAZ_Vorgabe;
     private String BAZ_Fortschritt;
+    private String Kante_Fortschritt;
     private String FertigZuschnitt;
     private String ZuschnittDatum;
     private String KA_Ist_L;
@@ -130,6 +131,7 @@ public class USERALBDetailsModel {
     private String KH_Verbrauch;
     private String FertigKante;
     private String CP_ausblenden;
+
 
     public String getFertigDatum() {
         return FertigDatum;
@@ -209,6 +211,10 @@ public class USERALBDetailsModel {
 
     public String getArdisSPln() {
         return ArdisSPln;
+    }
+
+    public String getKante_Fortschritt() {
+        return Kante_Fortschritt;
     }
 
     public String getPlattenID() {
@@ -498,4 +504,6 @@ public class USERALBDetailsModel {
     public String getF20() {
         return F20;
     }
+
+
 }

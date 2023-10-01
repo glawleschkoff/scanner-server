@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/CloudyLeopard.main.iml" filepath="$PROJECT_DIR$/.idea/modules/CloudyLeopard.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/de.glawleschkoff.moritz.CloudyLeopard.main.iml" filepath="$PROJECT_DIR$/.idea/modules/de.glawleschkoff.moritz.CloudyLeopard.main.iml" />
     </modules>
   </component>
 </project>

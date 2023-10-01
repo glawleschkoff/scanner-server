@@ -7,7 +7,7 @@
         <processorPath useClasspath="false">
           <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework.boot/spring-boot-configuration-processor/2.7.7/483f6acb3b0aff6c3d3dc99e8b8f390fa893d0a2/spring-boot-configuration-processor-2.7.7.jar" />
         </processorPath>
-        <module name="CloudyLeopard.main" />
+        <module name="de.glawleschkoff.moritz.CloudyLeopard.main" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="17" />
