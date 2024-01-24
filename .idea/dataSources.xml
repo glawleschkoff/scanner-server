@@ -9,5 +9,18 @@
       <jdbc-url>jdbc:pervasive://KuhnleServer:1583/HKUHNLE</jdbc-url>
       <working-dir>$ProjectFileDir$</working-dir>
     </data-source>
+    <data-source source="LOCAL" name="HKUHNLE@KuhnleServer" uuid="2fd4106c-86ae-4573-adbf-0effc2ef6c04">
+      <driver-ref>19965c36-d5aa-411b-a38a-01c4e2a77315</driver-ref>
+      <synchronize>true</synchronize>
+      <imported>true</imported>
+      <configured-by-url>true</configured-by-url>
+      <remarks>$PROJECT_DIR$/src/main/resources/application.properties</remarks>
+      <jdbc-driver>com.pervasive.jdbc.v2.Driver</jdbc-driver>
+      <jdbc-url>jdbc:pervasive://KuhnleServer:1583/HKUHNLE;encoding=cp1252</jdbc-url>
+      <jdbc-additional-properties>
+        <property name="com.intellij.clouds.kubernetes.db.enabled" value="false" />
+      </jdbc-additional-properties>
+      <working-dir>$ProjectFileDir$</working-dir>
+    </data-source>
   </component>
 </project>

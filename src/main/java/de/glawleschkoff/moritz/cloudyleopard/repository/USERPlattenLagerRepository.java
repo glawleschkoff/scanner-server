@@ -17,7 +17,7 @@ public interface USERPlattenLagerRepository extends JpaRepository<USERPlattenLag
 
     @Transactional
     @Modifying
-    @Query(value = "update USERPlattenLager u set u.LagerPlatz = :lagerPlatz, u.Lng = :lng, u.Brt = :brt, u.MZ3 = :mz3, u.MZ6 = :auslagerId, u.MZ1 = :auslagerInfo, u.MZD1 = :auslagerDatum, u.Menge = :menge where u.PlattenId = :plattenId", nativeQuery = true)
+    @Query(value = "update USERPlattenLager u set u.LagerPlatz = :lagerPlatz, u.Lng = :lng, u.Brt = :brt, u.MZ3 = :mz3, u.MZ6 = :auslagerId, u.MZ1 = :auslagerInfo+' '+CONVERT(DAYOFMONTH(CURRENT_TIMESTAMP()),SQL_VARCHAR)+'.'+CONVERT(MONTH(CURRENT_TIMESTAMP()),SQL_VARCHAR)+'.'+CONVERT(YEAR(CURRENT_TIMESTAMP()),SQL_VARCHAR)+' '+CONVERT(CURTIME(),SQL_VARCHAR), u.MZD1 = :auslagerDatum, u.Menge = :menge where u.PlattenId = :plattenId", nativeQuery = true)
     void updateUSERPlattenLager(String lagerPlatz, Double lng, Double brt, String mz3, Double plattenId, String auslagerId, String auslagerInfo, Date auslagerDatum, Double menge);
 
     @Transactional

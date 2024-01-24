@@ -17,7 +17,7 @@ public class USERKommWagenController {
     }
 
     @GetMapping("/api/v1/kommwagen")
-    public USERKommWagenModel getUSERKommWagen(@RequestParam Integer auftrag) throws JsonProcessingException {
+    public USERKommWagenModel getUSERKommWagen(@RequestParam String auftrag) throws JsonProcessingException {
         return userKommWagenService.getUSERKommWagenByAuftrag(auftrag);
     }
 

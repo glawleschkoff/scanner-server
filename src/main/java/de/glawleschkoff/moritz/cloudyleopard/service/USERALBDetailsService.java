@@ -5,6 +5,8 @@ import de.glawleschkoff.moritz.cloudyleopard.repository.USERALBDetailsRepository
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import javax.transaction.Transactional;
+
 @Service
 public class USERALBDetailsService {
 
@@ -19,8 +21,11 @@ public class USERALBDetailsService {
         return useralbDetailsRepository.findByExemplarNr(id);
     }
 
+    @Transactional
     public void updateUSERALBDetails(String exemplarNr, String scannerAnweisung){
-        useralbDetailsRepository.updateUSERALBDetails(exemplarNr, scannerAnweisung);
+        String timestamp = useralbDetailsRepository.getTimestamp();
+        String[] parts = scannerAnweisung.split(";;");
+        useralbDetailsRepository.updateUSERALBDetails(exemplarNr, parts[0]+timestamp+parts[1]);
     }
 
 }

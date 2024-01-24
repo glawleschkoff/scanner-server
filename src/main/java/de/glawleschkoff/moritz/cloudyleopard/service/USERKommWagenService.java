@@ -15,7 +15,7 @@ public class USERKommWagenService {
         this.userKommWagenRepository = userKommWagenRepository;
     }
 
-    public USERKommWagenModel getUSERKommWagenByAuftrag(Integer auftrag){
+    public USERKommWagenModel getUSERKommWagenByAuftrag(String auftrag){
         return userKommWagenRepository.findByAuftrag(auftrag);
     }
 

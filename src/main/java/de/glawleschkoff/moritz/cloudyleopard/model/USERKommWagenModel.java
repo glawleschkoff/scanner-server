@@ -15,7 +15,7 @@ public class USERKommWagenModel {
     private Integer rowID;
 
     //@Column(columnDefinition = "VARCHAR(20) default 'NULL'")
-    private Integer auftrag;
+    private String auftrag;
 
     @Column(columnDefinition = "VARCHAR(20) default 'NULL'")
     private String wagenKennung;
@@ -24,7 +24,7 @@ public class USERKommWagenModel {
         return rowID;
     }
 
-    public Integer getAuftrag() {
+    public String getAuftrag() {
         return auftrag;
     }
 

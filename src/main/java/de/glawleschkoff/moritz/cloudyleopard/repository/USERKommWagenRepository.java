@@ -10,6 +10,8 @@ public interface USERKommWagenRepository extends JpaRepository<USERKommWagenMode
 
     @Query(value = "select RowId, Auftrag, WagenKennung" +
             " from USERKommWagen a where a.Auftrag= :auftrag ", nativeQuery = true)
-    USERKommWagenModel findByAuftrag(Integer auftrag);
+    USERKommWagenModel findByAuftrag(String auftrag);
+
+
 
 }

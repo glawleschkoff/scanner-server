@@ -85,9 +85,11 @@ public interface USERALBDetailsRepository extends JpaRepository<USERALBDetailsMo
 
     @Transactional
     @Modifying
-    @Query(value = "update USERALBDetails u set u.ScannerAntwort = :scannerAnweisung where u.ExemplarNr = :exemplarNr", nativeQuery = true)
-    void updateUSERALBDetails(String exemplarNr, String scannerAnweisung);
+    @Query(value = "update USERALBDetails u set u.ScannerAntwort = :scannerAntwort where u.ExemplarNr = :exemplarNr", nativeQuery = true)
+    void updateUSERALBDetails(String exemplarNr, String scannerAntwort);
 
+    @Query(value = "SELECT TOP 1 CAST(REPLACE(CAST(CURDATE() as char(10)),'-','') + REPLACE(CAST(CURTIME() as char(8)),':','') as char(14)) AS ServerZeitsetmpel FROM USERALBDetails", nativeQuery = true)
+    String getTimestamp();
 }
 
 
