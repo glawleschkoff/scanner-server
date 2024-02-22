@@ -26,7 +26,7 @@ public class USERPlattenLagerService {
     }
 
     public void updateUSERPlattenLager(String lagerPlatz, Double lng, Double brt, String mz3, Double plattenId, String auslagerId, String auslagerInfo, Date auslagerDatum, Double menge) {
-        userPlattenLagerRepository.updateUSERPlattenLager(lagerPlatz,lng,brt,mz3,plattenId,auslagerId,auslagerInfo,auslagerDatum,menge);
+        userPlattenLagerRepository.updateUSERPlattenLager(lagerPlatz,lng,brt,mz3,plattenId,auslagerId,auslagerInfo,menge);
     }
 
     public void insertUSERPlattenLager(Integer rowUserId, String matKurzzeichen, Double plattenId, String lagerplatz, String mz3, Double lng, Double brt){
