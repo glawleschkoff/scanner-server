@@ -27,6 +27,11 @@ public class USERPlattenLagerController {
         userPlattenLagerService.updateUSERPlattenLager(lagerPlatz,lng,brt,mz3,plattenId,auslagerId,auslagerInfo,auslagerDatum,menge);
     }
 
+    @GetMapping("/api/v1/plattenlagerupdatebearbeiten")
+    public void updatePlattenLagerBearbeiten(@RequestParam String lagerPlatz, Double lng, Double brt, String mz3, Double plattenId, String auslagerId, String auslagerInfo, Date auslagerDatum, Double menge) throws JsonProcessingException {
+        userPlattenLagerService.updateUSERPlattenLagerBearbeiten(lagerPlatz,lng,brt,mz3,plattenId,auslagerId,auslagerInfo,auslagerDatum,menge);
+    }
+
     @GetMapping("/api/v1/plattenlagerinsert")
     public void newPlattenLager(@RequestParam Integer rowUserId, String matKurzzeichen, Double plattenId, String lagerplatz, String mz3, Double lng, Double brt) throws JsonProcessingException{
         userPlattenLagerService.insertUSERPlattenLager(rowUserId, matKurzzeichen, plattenId, lagerplatz, mz3, lng, brt);

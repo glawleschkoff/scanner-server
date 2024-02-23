@@ -29,6 +29,10 @@ public class USERPlattenLagerService {
         userPlattenLagerRepository.updateUSERPlattenLager(lagerPlatz,lng,brt,mz3,plattenId,auslagerId,auslagerInfo,menge);
     }
 
+    public void updateUSERPlattenLagerBearbeiten(String lagerPlatz, Double lng, Double brt, String mz3, Double plattenId, String auslagerId, String auslagerInfo, Date auslagerDatum, Double menge) {
+        userPlattenLagerRepository.updateUSERPlattenLagerBearbeiten(lagerPlatz,lng,brt,mz3,plattenId,auslagerId,menge);
+    }
+
     public void insertUSERPlattenLager(Integer rowUserId, String matKurzzeichen, Double plattenId, String lagerplatz, String mz3, Double lng, Double brt){
         userPlattenLagerRepository.insertUSERPlattenLager(rowUserId, matKurzzeichen, plattenId, lagerplatz, mz3, lng, brt);
     }
