@@ -3,7 +3,6 @@ package de.glawleschkoff.moritz.cloudyleopard.controller;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import de.glawleschkoff.moritz.cloudyleopard.model.LagerModel;
 import de.glawleschkoff.moritz.cloudyleopard.service.LagerService;
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;

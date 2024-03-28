@@ -11,7 +11,9 @@ import org.springframework.boot.context.properties.EnableConfigurationProperties
 public class CloudyLeopardApplication {
 
     public static void main(String[] args) {
+
         SpringApplication.run(CloudyLeopardApplication.class, args);
+        System.out.println("111");
     }
 
 }

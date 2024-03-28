@@ -49,6 +49,11 @@ public class USERPlattenLagerModel {
     private String MZ1;
     @Column(columnDefinition = "DOUBLE(15) default NULL")
     private Double Menge;
+    @Column(columnDefinition = "DATE(10) default NULL")
+    private Date MZD1;
+    @Column(columnDefinition = "DATE(10) default NULL")
+    private Date MZD2;
+
 
     public Integer getRowID() {
         return rowID;
@@ -118,8 +123,15 @@ public class USERPlattenLagerModel {
         return MZ1;
     }
 
-
     public Double getMenge() {
         return Menge;
+    }
+
+    public Date getMZD1() {
+        return MZD1;
+    }
+
+    public Date getMZD2() {
+        return MZD2;
     }
 }

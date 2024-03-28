@@ -131,6 +131,7 @@ public class USERALBDetailsModel {
     private String KH_Verbrauch;
     private String FertigKante;
     private String CP_ausblenden;
+    private String NB_Fortschritt;
 
 
     public String getFertigDatum() {
@@ -503,6 +504,10 @@ public class USERALBDetailsModel {
 
     public String getF20() {
         return F20;
+    }
+
+    public String getNB_Fortschritt() {
+        return NB_Fortschritt;
     }
 
 

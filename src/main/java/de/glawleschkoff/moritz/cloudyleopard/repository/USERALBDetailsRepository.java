@@ -80,6 +80,7 @@ public interface USERALBDetailsRepository extends JpaRepository<USERALBDetailsMo
             ", GetDDMVal('KH Verbrauch',RowDDMFields) as KH_Verbrauch" +
             ", GetDDMB('FertigKante',RowDDMFields) as FertigKante" +
             ", GetDDMB('CP ausblenden',RowDDMFields) as CP_ausblenden" +
+            ", GetDDMStr('NB Fortschritt',RowDDMFields) as NB_Fortschritt" +
             " from USERALBDetails a where a.ExemplarNr= :id ", nativeQuery = true)
     USERALBDetailsModel findByExemplarNr(String id);
 
